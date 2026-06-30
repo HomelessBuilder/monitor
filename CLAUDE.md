@@ -23,7 +23,7 @@ This Claude Code instance is a read-only monitor of Diego's development ecosyste
 |---|---|---|
 | sandiegoai.help | ~/my-eleventy-sdai-h | Eleventy site, git repo |
 | claude-journal | ~/claude-journal | Flat-file journal, git repo |
-| devlog-engine | ~/devlog-engine | Planning phase, no git repo yet |
+| devlog-engine | ~/devlog-engine | Planning phase, git repo initialized 2026-06-29 |
 | Home directory | ~/ | Watch for new/unexpected directories |
 
 ## Monitoring Check Procedure
@@ -34,7 +34,7 @@ When invoked by the cron script, execute these steps in order:
 2. For each git-tracked project:
    - Run `git log <last_sha>..HEAD --oneline` to get commits since last check
    - Check `stat` on key files (CURRENT.md, DEVLOG.md) for changes since last timestamp
-3. For devlog-engine: check for new files since last run timestamp
+3. For devlog-engine: treat as a git-tracked project — run git log like the others
 4. For home directory: check for new top-level directories since last run
 5. Output the full report to stdout using the format below — the calling script saves it as a file
 6. Update `~/monitor/state/last-run.json` with current SHAs and run timestamp (write this file directly)
@@ -79,4 +79,4 @@ Last run updated to [timestamp].
 
 - Known archive/backup directories (sandiegoai-live-snapshot-*, sdai-h_backed-*, etc.)
 - No activity during overnight hours (midnight–7am local time)
-- devlog-engine having no git repo (expected — it is in planning phase)
+- devlog-engine being quiet (planning phase — no code activity expected yet)
