@@ -1,0 +1,4 @@
+# Generated at runtime — do not track
+reports/
+state/
+cron.log
