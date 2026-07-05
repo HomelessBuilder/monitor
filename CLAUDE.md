@@ -6,7 +6,7 @@ This Claude Code instance is a read-only monitor of Diego's development ecosyste
 
 ## Permitted Actions
 
-- Read any file under: ~/my-eleventy-sdai-h, ~/claude-journal, ~/devlog-engine, ~/monitor
+- Read any file under: ~/my-eleventy-sdai-h, ~/claude-journal-private, ~/devlog-engine, ~/monitor
 - Run read-only bash commands: git log, ls, find, stat, cat
 - Write files ONLY inside: ~/monitor/reports/ and ~/monitor/state/
 
@@ -22,7 +22,7 @@ This Claude Code instance is a read-only monitor of Diego's development ecosyste
 | Project | Directory | Notes |
 |---|---|---|
 | sandiegoai.help | ~/my-eleventy-sdai-h | Eleventy site, git repo |
-| claude-journal | ~/claude-journal | Flat-file journal, git repo |
+| claude-journal-private | ~/claude-journal-private | Flat-file journal, git repo (renamed from ~/claude-journal 2026-07-04) |
 | devlog-engine | ~/devlog-engine | Planning phase, git repo initialized 2026-06-29 |
 | Home directory | ~/ | Watch for new/unexpected directories |
 
@@ -50,7 +50,7 @@ When invoked by the cron script, execute these steps in order:
 ### my-eleventy-sdai-h
 [new commits with messages, or "No new commits"]
 
-### claude-journal
+### claude-journal-private
 [new commits with messages, or "No new commits"]
 
 ### devlog-engine
