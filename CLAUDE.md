@@ -77,6 +77,6 @@ Last run updated to [timestamp].
 
 ## What Does NOT Count as a Concern
 
-- Known archive/backup directories (sandiegoai-live-snapshot-*, sdai-h_backed-*, etc.)
+- Known archive/backup directories (sandiegoai-live-snapshot-*, etc.) — note: `sdai-h_backed-*` was moved off-VM to host-system storage and no longer exists here
 - No activity during overnight hours (midnight–7am local time)
 - devlog-engine being quiet (planning phase — no code activity expected yet)
